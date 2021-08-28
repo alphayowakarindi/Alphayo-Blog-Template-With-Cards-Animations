@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar From Scratch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Menu Button -->
+      <div class="menuButton">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- header -->
+      <header>
+        <div class="header-text">
+          <h1>Great Photography</h1>
+          <h4>I Don't Trust Words...</h4>
+        </div>
+        <div class="overlay"></div>
+      </header>
+
+      <!-- sidebar -->
+      <div class="sidebar">
+        <span class="closeButton">&times;</span>
+        <p class="brand-title"><a href="">Great Photography</a></p>
+
+        <div class="side-links">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">What Clients Are Saying</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <footer>
+          <small>&copy 2021 Great Photography</small>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector(".menuButton")
+        .addEventListener("click", function () {
+          document.querySelector(".sidebar").style.width = "100%";
+          document.querySelector(".sidebar").style.zIndex = "5";
+        });
+
+      document
+        .querySelector(".closeButton")
+        .addEventListener("click", function () {
+          document.querySelector(".sidebar").style.width = "0";
+        });
+    </script>
+  </body>
+</html>

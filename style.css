@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#wrapper {
+  margin-left: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+/* header */
+
+header {
+  background-image: url("images/photography.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-text {
+  margin-top: 145px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.header-text h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.header-text h4 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background-color: black;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+.brand-title {
+  margin: 75px 0 40px 55px;
+  font-size: 22px;
+}
+
+.side-links li {
+  margin: 6px 8px 20px 56px;
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 140px;
+  color: #999;
+}
+
+/* Menu Button */
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.menuButton {
+  cursor: pointer;
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  z-index: 1;
+  display: none;
+}
+
+/* Close Button */
+.closeButton {
+  font-size: 50px;
+  padding-left: 85%;
+  color: whitesmoke;
+  cursor: pointer;
+  display: none;
+}
+
+/* Medium devices and below */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+
+  #wrapper {
+    margin-left: 0;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .closeButton {
+    display: block;
+  }
+}
